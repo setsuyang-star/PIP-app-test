@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover">
-<title>PIP 换牌改造报告 App · 实时联动原型</title>
+<title>PIP Report Web beta</title>
 <style>
 @import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Noto+Sans+SC:wght@300;400;500;700&display=swap');
 
@@ -308,7 +308,7 @@ body{
 /* — generic rhythm — */
 .sectionlabel{letter-spacing:.02em}
 .accordion{border-radius:13px}
-.badge{white-space:nowrap;line-height:1.25}#login{display:none;position:fixed;inset:0;z-index:99999;background:linear-gradient(160deg,#16284f,#0f1d3e);align-items:center;justify-content:center;padding:24px}.login-card{width:100%;max-width:300px;background:#fff;border-radius:18px;padding:26px 22px;box-shadow:0 20px 50px -20px rgba(0,0,0,.6);text-align:center}.lg-logo{margin-bottom:8px}.lg-title{font:700 22px/1 'Cormorant Garamond',serif;color:var(--navy);display:flex;justify-content:center;align-items:baseline;gap:8px}.lg-title span{font-size:13px;color:var(--gold);font-family:'Noto Sans SC',sans-serif}.lg-sub{font-size:9px;letter-spacing:.22em;text-transform:uppercase;color:var(--muted);margin:5px 0 18px}.login-card input{width:100%;box-sizing:border-box;border:1px solid #ded7c8;border-radius:10px;padding:11px 12px;font-size:13px;margin-bottom:10px;background:#fcfbf8}.login-card input:focus{outline:none;border-color:var(--gold)}.lg-err{display:none;color:var(--bad);font-size:11px;margin:2px 0 8px;line-height:1.4}.lg-hint{font-size:10px;color:var(--muted);margin-top:14px;line-height:1.7;border-top:1px solid #efece4;padding-top:12px}#projbar{display:none;align-items:center;justify-content:space-between;padding:6px 16px;background:#0f1d3e;color:#cdd6e6;font-size:10.5px;border-bottom:1px solid rgba(255,255,255,.08)}body[data-role] #projbar{display:flex}#projbar #proj-id{font-weight:700;color:#fff}#projbar #save-ind{color:#9fb0c9}.dpd-only{display:none}body[data-role="dpd"] .dpd-only{display:flex}body[data-role="hotel"] .tab[data-s="s-home"],body[data-role="hotel"] .tab[data-s="s-eval"],body[data-role="hotel"] .tab[data-s="s-site"],body[data-role="hotel"] .tab[data-s="s-sum"]{display:none}#s-dash .np-card{background:#fff;border:1px solid #ece7db;border-radius:14px;padding:15px;margin-bottom:16px}.np-h{font-size:12px;font-weight:700;color:var(--navy);margin-bottom:10px}#s-dash .np-card input{width:100%;box-sizing:border-box;border:1px solid #ded7c8;border-radius:9px;padding:10px;font-size:12.5px;margin-bottom:9px;background:#fcfbf8}.dash-lbl{font-size:11px;font-weight:700;letter-spacing:.04em;color:var(--gold);text-transform:uppercase;margin:6px 2px 10px}.dash-empty{font-size:12px;color:var(--muted);text-align:center;padding:24px;background:#faf8f3;border-radius:12px}.pcard{background:#fff;border:1px solid #ece7db;border-radius:13px;padding:13px 14px;margin-bottom:11px;box-shadow:0 1px 2px rgba(19,37,76,.04)}.pcard .ph{display:flex;justify-content:space-between;align-items:flex-start;gap:10px}.pcard .pid{font:700 13px/1 'Cormorant Garamond',serif;color:var(--navy);letter-spacing:.03em}.pcard .pnm{font-size:12px;color:#33363b;margin-top:3px}.pst{font-size:9px;font-weight:700;padding:3px 9px;border-radius:20px;white-space:nowrap}.pst.s-draft{background:#eceae3;color:#7a786f}.pst.s-submitted{background:#e6eef9;color:#1f4e79}.pst.s-in_review{background:#f6ecd5;color:#8a6d1e}.pst.s-final{background:#e6f0e8;color:var(--ok)}.pmeta{display:flex;flex-wrap:wrap;gap:6px;margin:10px 0}.pl{font-size:9.5px;color:var(--muted);background:#faf8f3;border:1px solid #efece4;border-radius:7px;padding:3px 8px}.pl.locked{color:var(--bad);background:#f9eaea;border-color:#eccfcf}.pl.open{color:var(--ok)}.pl.chg{color:#8a6d1e;background:#f6ecd5;border-color:#ead9b6}.pacts{display:flex;gap:7px;margin-top:4px}.btn.sm{padding:8px 10px;font-size:11px;margin:0;flex:1}.btn.ghost{background:#fff;border:1px solid #d9d2c4;color:var(--navy)}.intro,.caption{display:none!important}#toast{position:fixed;left:50%;top:70px;transform:translateX(-50%) translateY(-12px);z-index:100000;background:var(--navy);color:#fff;padding:14px 20px;border-radius:13px;font-size:12.5px;box-shadow:0 16px 36px -12px rgba(0,0,0,.55);opacity:0;pointer-events:none;transition:opacity .26s ease,transform .26s ease;max-width:84%;text-align:center;line-height:1.55;border:1px solid rgba(179,137,79,.55)}#toast.show{opacity:1;transform:translateX(-50%) translateY(0)}#toast b{color:var(--gold);font-size:13.5px}.btn.gold.done{background:var(--ok);border-color:var(--ok)}body[data-proj="none"] .tab[data-s="s-home"],body[data-proj="none"] .tab[data-s="s-form"],body[data-proj="none"] .tab[data-s="s-eval"],body[data-proj="none"] .tab[data-s="s-site"],body[data-proj="none"] .tab[data-s="s-sum"]{opacity:.32;pointer-events:none;filter:grayscale(.5)}.dash-tip{font-size:11px;color:#8a6d1e;background:#f6ecd5;border:1px solid #ead9b6;border-radius:9px;padding:9px 11px;margin:0 0 14px;line-height:1.5}/*ENDCUSTOM*/</style>
+.badge{white-space:nowrap;line-height:1.25}#login{display:none;position:fixed;inset:0;z-index:99999;background:linear-gradient(160deg,#16284f,#0f1d3e);align-items:center;justify-content:center;padding:24px}.login-card{width:100%;max-width:300px;background:#fff;border-radius:18px;padding:26px 22px;box-shadow:0 20px 50px -20px rgba(0,0,0,.6);text-align:center}.lg-logo{margin-bottom:8px}.lg-title{font:700 32px/1 'Cormorant Garamond',serif;color:var(--navy);text-align:center;letter-spacing:.05em}.lg-by{font-size:10px;letter-spacing:.16em;color:var(--gold);text-transform:uppercase;text-align:center;font-weight:600;margin:0 0 18px}.lg-title span{font-size:13px;color:var(--gold);font-family:'Noto Sans SC',sans-serif}.lg-sub{font-size:9px;letter-spacing:.22em;text-transform:uppercase;color:var(--muted);margin:7px 0 2px}.login-card input{width:100%;box-sizing:border-box;border:1px solid #ded7c8;border-radius:10px;padding:11px 12px;font-size:13px;margin-bottom:10px;background:#fcfbf8}.login-card input:focus{outline:none;border-color:var(--gold)}.lg-err{display:none;color:var(--bad);font-size:11px;margin:2px 0 8px;line-height:1.4}.lg-hint{font-size:10px;color:var(--muted);margin-top:14px;line-height:1.7;border-top:1px solid #efece4;padding-top:12px}#projbar{display:none;align-items:center;justify-content:space-between;padding:6px 16px;background:#0f1d3e;color:#cdd6e6;font-size:10.5px;border-bottom:1px solid rgba(255,255,255,.08)}body[data-role] #projbar{display:flex}#projbar #proj-id{font-weight:700;color:#fff}#projbar #save-ind{color:#9fb0c9}.dpd-only{display:none}body[data-role="dpd"] .dpd-only{display:flex}body[data-role="hotel"] .tab[data-s="s-home"],body[data-role="hotel"] .tab[data-s="s-eval"],body[data-role="hotel"] .tab[data-s="s-site"],body[data-role="hotel"] .tab[data-s="s-sum"]{display:none}#s-dash .np-card{background:#fff;border:1px solid #ece7db;border-radius:14px;padding:15px;margin-bottom:16px}.np-h{font-size:12px;font-weight:700;color:var(--navy);margin-bottom:10px}#s-dash .np-card input{width:100%;box-sizing:border-box;border:1px solid #ded7c8;border-radius:9px;padding:10px;font-size:12.5px;margin-bottom:9px;background:#fcfbf8}.dash-lbl{font-size:11px;font-weight:700;letter-spacing:.04em;color:var(--gold);text-transform:uppercase;margin:6px 2px 10px}.dash-empty{font-size:12px;color:var(--muted);text-align:center;padding:24px;background:#faf8f3;border-radius:12px}.pcard{background:#fff;border:1px solid #ece7db;border-radius:13px;padding:13px 14px;margin-bottom:11px;box-shadow:0 1px 2px rgba(19,37,76,.04)}.pcard .ph{display:flex;justify-content:space-between;align-items:flex-start;gap:10px}.pcard .pid{font:700 13px/1 'Cormorant Garamond',serif;color:var(--navy);letter-spacing:.03em}.pcard .pnm{font-size:12px;color:#33363b;margin-top:3px}.pst{font-size:9px;font-weight:700;padding:3px 9px;border-radius:20px;white-space:nowrap}.pst.s-draft{background:#eceae3;color:#7a786f}.pst.s-submitted{background:#e6eef9;color:#1f4e79}.pst.s-in_review{background:#f6ecd5;color:#8a6d1e}.pst.s-final{background:#e6f0e8;color:var(--ok)}.pmeta{display:flex;flex-wrap:wrap;gap:6px;margin:10px 0}.pl{font-size:9.5px;color:var(--muted);background:#faf8f3;border:1px solid #efece4;border-radius:7px;padding:3px 8px}.pl.locked{color:var(--bad);background:#f9eaea;border-color:#eccfcf}.pl.open{color:var(--ok)}.pl.chg{color:#8a6d1e;background:#f6ecd5;border-color:#ead9b6}.pacts{display:flex;gap:7px;margin-top:4px}.btn.sm{padding:8px 10px;font-size:11px;margin:0;flex:1}.btn.ghost{background:#fff;border:1px solid #d9d2c4;color:var(--navy)}.intro,.caption{display:none!important}#toast{position:fixed;left:50%;top:70px;transform:translateX(-50%) translateY(-12px);z-index:100000;background:var(--navy);color:#fff;padding:14px 20px;border-radius:13px;font-size:12.5px;box-shadow:0 16px 36px -12px rgba(0,0,0,.55);opacity:0;pointer-events:none;transition:opacity .26s ease,transform .26s ease;max-width:84%;text-align:center;line-height:1.55;border:1px solid rgba(179,137,79,.55)}#toast.show{opacity:1;transform:translateX(-50%) translateY(0)}#toast b{color:var(--gold);font-size:13.5px}.btn.gold.done{background:var(--ok);border-color:var(--ok)}body[data-proj="none"] .tab[data-s="s-home"],body[data-proj="none"] .tab[data-s="s-form"],body[data-proj="none"] .tab[data-s="s-eval"],body[data-proj="none"] .tab[data-s="s-site"],body[data-proj="none"] .tab[data-s="s-sum"]{opacity:.32;pointer-events:none;filter:grayscale(.5)}.dash-tip{font-size:11px;color:#8a6d1e;background:#f6ecd5;border:1px solid #ead9b6;border-radius:9px;padding:9px 11px;margin:0 0 14px;line-height:1.5}.pdflist{max-height:210px;overflow:auto;margin:9px 0;text-align:left;border:1px solid #efece4;border-radius:9px;padding:6px 10px;background:#fcfbf8}.pdfrow{display:flex;gap:9px;align-items:flex-start;padding:5px 0;border-top:1px solid #f3f0e9;font-size:12px}.pdfrow:first-child{border-top:0}.pdfrow input{margin-top:3px}.pdfrow b{color:var(--navy);font-weight:600}.pdfrow i{display:block;font-style:normal;color:var(--gold);margin-top:2px}/*ENDCUSTOM*/</style>
 <style>html,body{margin:0!important;padding:0!important;background:#fff!important}.intro,.flowbar,.caption,.notch,.statusbar{display:none!important}body{display:block!important;min-height:100vh!important}.phone{width:100vw!important;max-width:100vw!important;height:100vh!important;height:100dvh!important;border-radius:0!important;box-shadow:none!important;margin:0!important;display:flex!important;flex-direction:column!important}.screen-wrap{flex:1!important}@supports(padding:env(safe-area-inset-bottom)){.tabbar{padding-bottom:calc(8px + env(safe-area-inset-bottom))!important}}</style><style>
 /* ===== v1.0 视觉升级：启动页 / Logo / 图标端点 ===== */
 .tab .ic svg{stroke-linecap:round;stroke-linejoin:round}
@@ -422,13 +422,14 @@ body{
   <div id="login">
     <div class="login-card">
       <div class="lg-logo"><svg width="54" height="54" viewBox="0 0 120 120"><rect x="3" y="3" width="114" height="114" rx="29" fill="#16284f"/><rect x="15" y="15" width="90" height="90" rx="20" fill="none" stroke="#b3894f" stroke-width="1.4" opacity=".6"/><text x="60" y="78" text-anchor="middle" font-family="'Cormorant Garamond',serif" font-weight="700" font-size="64" fill="#b3894f">P</text></svg></div>
-      <div class="lg-title">PIP Sign In<span>登录</span></div>
+      <div class="lg-title">PIP</div>
       <div class="lg-sub">Property Improvement Plan</div>
-      <input id="login-id" placeholder="Project ID 项目编号 · or DPD account 账号" autocomplete="off" onkeydown="if(event.key==='Enter')doLogin()">
-      <input id="login-pass" type="password" placeholder="Password 密码" onkeydown="if(event.key==='Enter')doLogin()">
+      <div class="lg-by">by HILTON</div>
+      <input id="login-id" placeholder="Project ID or DPD account" autocomplete="off" onkeydown="if(event.key==='Enter')doLogin()">
+      <input id="login-pass" type="password" placeholder="Password" onkeydown="if(event.key==='Enter')doLogin()">
       <div id="login-err" class="lg-err"></div>
-      <button class="btn gold" onclick="doLogin()">Sign in 登录</button>
-      <div class="lg-hint"><b>DPD</b> pipwriter / pipwriter &nbsp;·&nbsp; <b>Hotel 酒店</b> PIP2026001 / PIP2026001</div>
+      <button class="btn gold" onclick="doLogin()">Sign in</button>
+      <div class="lg-hint"><b>DPD</b> pipwriter / pipwriter &nbsp;·&nbsp; <b>Hotel</b> PIP2026001 / PIP2026001</div>
     </div>
   </div>
   <div class="screen-wrap">
@@ -508,7 +509,7 @@ body{
     <button class="uptab" id="ut-upload" onclick="upMode('upload')">上传识别 Upload</button>
   </div>
   <div id="up-panel" style="display:none">
-    <div class="up-steps">支持 <b>CSV / Excel / JSON</b>。最稳妥：先「下载导入模板」，在「填写值」列填入项目数据后上传，按字段精确写入；也可直接上传含「字段/标签 + 值」两列的表。PDF / 图片需 OCR，暂不在浏览器内解析。</div>
+    <div class="up-steps">可上传已填写的 <b>《PIP 信息收集表》PDF</b>，系统自动识别可匹配字段（请核对结果，复杂项以下方模板最精确）。也支持 <b>CSV / Excel / JSON</b>：先「下载导入模板」，在「填写值」列填好后上传即按字段精确写入。扫描件 / 图片型 PDF 需 OCR，暂不支持。</div>
     <label class="filepick"><input type="file" accept=".csv,.json,.xlsx,.xls,.pdf,.docx,.png,.jpg" onchange="onFile(this)"><span class="upic">⬆</span><span id="fname">点此选择文件</span></label>
     <div class="uprow"><button class="btn" id="parsebtn" disabled onclick="runParse()">开始识别并自动写入</button>
       <button class="btn ghost" onclick="downloadTemplate()">下载导入模板</button></div>
@@ -1095,8 +1096,8 @@ function buildReportDoc(){
     +'.savebar,.apphead .back{display:none!important}#s-sum,#s-sum .body{display:block!important;position:static!important;height:auto!important;overflow:visible!important}'
     +'img{max-width:100%!important}*{-webkit-print-color-adjust:exact;print-color-adjust:exact}@page{margin:14mm}</style>';
   return '<!doctype html><html lang="zh"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>PIP 评估报告</title>'
-    +styles+extra+'</head><body>'+report
-    +'<scr'+'ipt>window.onload=function(){setTimeout(function(){try{window.focus();window.print();}catch(e){}},350);};</scr'+'ipt></body></html>';
+    +'<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Noto+Sans+SC:wght@300;400;500;700&display=swap">'+styles+extra+'</head><body>'+report
+    +'<scr'+'ipt>window.onload=function(){setTimeout(function(){try{window.focus();window.print();}catch(e){}},600);};</scr'+'ipt></body></html>';
 }
 function downloadReport(){
   go('s-sum');
@@ -1110,15 +1111,21 @@ function downloadReport(){
 function exportPDF(){
   go('s-sum');
   setTimeout(function(){
-    var doc=buildReportDoc(), w=null;
-    try{ w=window.open('','_blank'); }catch(e){ w=null; }
-    if(w&&w.document){ w.document.open(); w.document.write(doc); w.document.close(); return; }
-    // 新窗口被拦截 → 下载独立报告 HTML，浏览器打开后「打印→存为 PDF」
     try{
-      var blob=new Blob([doc],{type:'text/html;charset=utf-8'});
-      var a=document.createElement('a'); a.href=URL.createObjectURL(blob);
-      a.download='PIP评估报告.html'; document.body.appendChild(a); a.click(); a.remove();
-    }catch(e2){ try{ window.print(); }catch(e3){ alert('无法触发打印，请在浏览器中打开本页后使用「打印 / 存为 PDF」。'); } }
+      var doc=buildReportDoc();
+      var old=document.getElementById('pdf-frame'); if(old)old.remove();
+      var ifr=document.createElement('iframe'); ifr.id='pdf-frame';
+      ifr.style.cssText='position:fixed;left:-10000px;top:0;width:820px;height:0;border:0;opacity:0;';
+      document.body.appendChild(ifr);
+      var d=ifr.contentWindow.document; d.open(); d.write(doc); d.close();
+    }catch(e){
+      try{
+        var blob=new Blob([buildReportDoc()],{type:'text/html;charset=utf-8'});
+        var a=document.createElement('a'); a.href=URL.createObjectURL(blob);
+        a.download='PIP评估报告.html'; document.body.appendChild(a); a.click(); a.remove();
+        alert('已下载报告 HTML，请打开后用浏览器「打印 / 存为 PDF」导出。');
+      }catch(e2){ try{ window.print(); }catch(e3){ alert('请使用浏览器「打印 / 存为 PDF」导出。'); } }
+    }
   },220);
 }
 // ---------------- project identity linkage ----------------
@@ -1246,6 +1253,65 @@ function finishImport(r){
   if(r.ok===0){ msg('work','未能识别到匹配字段（写入 0 项）。建议用「下载模板」得到的 CSV 填写后上传，或改用 JSON。'+(r.miss.length?'<br>文件中的表头示例：'+r.miss.slice(0,6).join('、'):'')); return; }
   msg('ok','✓ 已写入 <b>'+r.ok+'</b> 项字段，表单 / 判断 / 统计已联动更新。'+(r.miss.length?'<br><span style="color:var(--warn)">'+r.miss.length+' 项未匹配：'+r.miss.slice(0,8).join('、')+(r.miss.length>8?' …':'')+'</span>':'')+'<br><a style="color:var(--navy);font-weight:700;text-decoration:underline" onclick="go(\'s-eval\')">查看品牌标准判断 →</a>');
 }
+
+var PDF_PENDING=[];
+function applyPdfPending(){
+  var boxes=[].slice.call(document.querySelectorAll('#up-msg input[type=checkbox]'));
+  var entries=[]; boxes.forEach(function(c){ if(c.checked){ var m=PDF_PENDING[+c.dataset.i]; if(m)entries.push([m.flabel,m.val]); } });
+  if(!entries.length){ msg('work','未选择任何项。'); return; }
+  finishImport(applyImport(entries));
+}
+function ensurePDFJS(){
+  return new Promise(function(res,rej){
+    if(window.pdfjsLib)return res(window.pdfjsLib);
+    var s=document.createElement('script');
+    s.src='https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.11.174/pdf.min.js';
+    s.onload=function(){ try{ window.pdfjsLib.GlobalWorkerOptions.workerSrc='https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.11.174/pdf.worker.min.js'; }catch(e){} res(window.pdfjsLib); };
+    s.onerror=function(){ rej(new Error('无法加载 PDF 识别器（可能离线）')); };
+    document.head.appendChild(s);
+  });
+}
+function _pdfPageEntries(annos, items){
+  var out=[];
+  annos.forEach(function(a){
+    var v=a.value; if(v==null)return; v=(''+v).trim(); if(v===''||v==='Off')return;
+    var cy=(a.y1+a.y2)/2, h=Math.abs(a.y2-a.y1)||10;
+    var row=items.filter(function(t){ return Math.abs(t.y-cy)<=Math.max(6,h*0.85) && (t.x+t.w)<=a.x1+3; });
+    row.sort(function(p,q){return p.x-q.x;});
+    var lab=row.slice(-8).map(function(t){return t.str;}).join(' ').replace(/\s+/g,' ').trim();
+    if(lab.replace(/[^\u4e00-\u9fa5a-zA-Z]/g,'').length<2){
+      var ab=items.filter(function(t){ return t.y>=a.y2-2 && (t.y-a.y2)<=h*1.9+10 && t.x<a.x2 && (t.x+t.w)>a.x1; });
+      ab.sort(function(p,q){return (p.y-a.y2)-(q.y-a.y2);});
+      lab=ab.slice(0,8).map(function(t){return t.str;}).join(' ').replace(/\s+/g,' ').trim();
+    }
+    lab=lab.replace(/[\s:：☐]+$/,'').trim();
+    if(lab) out.push([lab,v]);
+  });
+  return out;
+}
+function parsePdf(file){
+  return ensurePDFJS().then(function(pdfjsLib){
+    return (file.arrayBuffer?file.arrayBuffer():new Response(file).arrayBuffer()).then(function(buf){
+      return pdfjsLib.getDocument({data:new Uint8Array(buf)}).promise.then(function(pdf){
+        var all=[], chain=Promise.resolve();
+        for(var p=1;p<=pdf.numPages;p++){ (function(pn){
+          chain=chain.then(function(){ return pdf.getPage(pn).then(function(page){
+            return Promise.all([page.getAnnotations(), page.getTextContent()]).then(function(rs){
+              var annos=rs[0].filter(function(a){return a.subtype==='Widget'&&a.fieldType==='Tx'&&a.fieldName;}).map(function(a){
+                var v=a.fieldValue; if(Array.isArray(v))v=v[0];
+                return {value:v, x1:a.rect[0], y1:a.rect[1], x2:a.rect[2], y2:a.rect[3]};
+              });
+              var items=rs[1].items.map(function(it){var tr=it.transform;return {str:it.str,x:tr[4],y:tr[5],w:it.width||0};}).filter(function(t){return t.str&&t.str.trim();});
+              all=all.concat(_pdfPageEntries(annos,items));
+            });
+          }); });
+        })(p); }
+        return chain.then(function(){ return all; });
+      });
+    });
+  });
+}
+
 function runParse(){
   if(!IMPORT_FILE){ msg('work','请先选择文件。'); return; }
   var b=document.getElementById('parsebtn'); b.disabled=true; b.textContent='正在识别…'; msg('work','① 读取文件…');
@@ -1264,8 +1330,19 @@ function runParse(){
   } else if(/\.csv$/.test(name)){
     rd.onload=function(){ try{ finishImport(applyImport(parseCSV(rd.result))); }catch(e){ msg('work','CSV 解析失败：'+e.message); b.disabled=false; b.textContent='重新识别'; } };
     rd.readAsText(IMPORT_FILE);
+  } else if(/\.pdf$/.test(name)){
+    msg('work','① 加载 PDF 识别器…（首次较慢）');
+    parsePdf(IMPORT_FILE).then(function(entries){
+      var seen={}, uniq=[];
+      entries.forEach(function(p){ var f=matchField(p[0]); if(f&&!seen[f.key]){ seen[f.key]=1; uniq.push({key:f.key, flabel:f.label, val:String(p[1]).trim()}); } });
+      b.disabled=false; b.textContent='重新识别';
+      if(!uniq.length){ msg('work','未能从该 PDF 自动匹配到字段（此表为密集双栏表单，自动识别有限）。建议改用「下载模板」CSV / Excel 精确导入。'); return; }
+      PDF_PENDING=uniq;
+      var rows=uniq.map(function(m,i){ return '<label class="pdfrow"><input type="checkbox" checked data-i="'+i+'"><span><b>'+m.flabel+'</b><i>← '+m.val+'</i></span></label>'; }).join('');
+      msg('work','识别到 <b>'+uniq.length+'</b> 项，请核对后写入（<span style="color:var(--warn)">PDF 自动识别可能有误差，错配项请取消勾选</span>）：<div class="pdflist">'+rows+'</div><button class="btn gold" style="padding:9px;margin-top:4px" onclick="applyPdfPending()">写入所选 →</button>');
+    }).catch(function(e){ b.disabled=false; b.textContent='重新识别'; msg('work','PDF 解析失败：'+((e&&e.message)||e)+'。可能离线无法加载识别器；请改用 CSV / Excel。'); });
   } else {
-    msg('work','浏览器内暂不支持解析 '+(name.split('.').pop()||'').toUpperCase()+'（PDF/Word/图片需 OCR）。请用「下载模板」填好后上传 CSV / Excel，或上传 JSON。');
+    msg('work','浏览器内暂不支持解析 '+(name.split('.').pop()||'').toUpperCase()+'（Word / 图片需 OCR）。请用「下载模板」填好后上传 CSV / Excel / JSON。');
     b.disabled=false; b.textContent='重新识别';
   }
 }
@@ -1389,14 +1466,14 @@ function autosave(){ if(!CURRENT||!SESSION)return; clearTimeout(_saveT);
 // ---------- auth ----------
 function login(id,pass){ id=(id||'').trim(); pass=(pass||'');
   var a=getAccounts()[id];
-  if(a&&a.role==='dpd'){ return a.pass===hashPass(pass)?{ok:true,role:'dpd'}:{ok:false,msg:'Password incorrect · 密码错误'}; }
-  if(/^PIP\d{7}$/i.test(id)){ var p=getProject(id.toUpperCase()); if(!p)return {ok:false,msg:'Project not found · 项目不存在'};
-    if(p.collectLocked)return {ok:false,msg:'Collect locked by DPD · 采集已锁定，请联系 DPD'};
-    return p.hotelPass===pass?{ok:true,role:'hotel',projectId:p.id}:{ok:false,msg:'Password incorrect · 密码错误'}; }
+  if(a&&a.role==='dpd'){ return a.pass===hashPass(pass)?{ok:true,role:'dpd'}:{ok:false,msg:'Password incorrect'}; }
+  if(/^PIP\d{7}$/i.test(id)){ var p=getProject(id.toUpperCase()); if(!p)return {ok:false,msg:'Project not found'};
+    if(p.collectLocked)return {ok:false,msg:'Collect locked by DPD — please contact your consultant'};
+    return p.hotelPass===pass?{ok:true,role:'hotel',projectId:p.id}:{ok:false,msg:'Password incorrect'}; }
   var pr=listProjects(), hit=null; Object.keys(pr).forEach(function(k){var q=pr[k]; if(q.name_zh===id||q.name_en===id)hit=q;});
-  if(hit){ if(hit.collectLocked)return {ok:false,msg:'Collect locked by DPD · 采集已锁定，请联系 DPD'};
-    return hit.hotelPass===pass?{ok:true,role:'hotel',projectId:hit.id}:{ok:false,msg:'Password incorrect · 密码错误'}; }
-  return {ok:false,msg:'Unknown account · 账号不存在'};
+  if(hit){ if(hit.collectLocked)return {ok:false,msg:'Collect locked by DPD — please contact your consultant'};
+    return hit.hotelPass===pass?{ok:true,role:'hotel',projectId:hit.id}:{ok:false,msg:'Password incorrect'}; }
+  return {ok:false,msg:'Account not found'};
 }
 function doLogin(){
   var id=document.getElementById('login-id').value, pass=document.getElementById('login-pass').value;
